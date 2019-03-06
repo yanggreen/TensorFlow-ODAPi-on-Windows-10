@@ -31,7 +31,7 @@ from utils import visualization_utils as vis_util
 
 # Name of the directory containing the object detection module we're using
 MODEL_NAME = 'inference_graph'
-IMAGE_NAME = 'test1.jpg'
+IMAGE_NAME = 'test5.jpg'
 
 # Grab path to current working directory
 CWD_PATH = os.getcwd()
@@ -47,7 +47,7 @@ PATH_TO_LABELS = os.path.join(CWD_PATH,'training','labelmap.pbtxt')
 PATH_TO_IMAGE = os.path.join(CWD_PATH,IMAGE_NAME)
 
 # Number of classes the object detector can identify
-NUM_CLASSES = 6
+NUM_CLASSES = 3
 
 # Load the label map.
 # Label maps map indices to category names, so that when our convolution
@@ -107,7 +107,7 @@ vis_util.visualize_boxes_and_labels_on_image_array(
     category_index,
     use_normalized_coordinates=True,
     line_thickness=8,
-    min_score_thresh=0.80)
+    min_score_thresh=0.60)
 
 # All the results have been drawn on image. Now display the image.
 cv2.imshow('Object detector', image)
